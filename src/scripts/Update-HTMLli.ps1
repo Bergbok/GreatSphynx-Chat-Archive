@@ -38,25 +38,31 @@ function Get-Title {
     return $filename
 }
 
-function Format-URL {
+function Get-HTMLURL {
     param (
-        [string]$url
+        [string]$filepath
     )
 
-    $containsSingle = $url -match "'"
-    $containsDouble = $url -match '"'
+    $filename = [IO.Path]::GetFileName($filepath)
+
+    $containsSingle = $filename -match "'"
+    $containsDouble = $filename -match '"'
+
+    if ($filepath -match "(\/|\\)clips(\/|\\)$([regex]::Escape($filename))") {
+        $filename = 'clips/' + $filename
+    }
 
     if ($containsSingle -and -not $containsDouble) {
-        return "`"$url`""
+        return "`"/$filename`""
     }
     elseif ($containsDouble -and -not $containsSingle) {
-        return "'$url'"
+        return "'/$filename'"
     }
     elseif ($containsSingle -and $containsDouble) {
-        return "'$($url -replace "'", "&apos;" -replace '"', "&quot;")'"
+        return "'/$($filename -replace "'", "&apos;" -replace '"', "&quot;")'"
     }
     else {
-        return "'$url'"
+        return "'/$filename'"
     }
 }
 
@@ -69,7 +75,6 @@ function Get-ListItems {
 
     $sortedFiles = $files | Sort-Object {
         if ($_.BaseName -match '\b(\d{4}-\d{2}-\d{2})\b') {
-            # Parse the date extracted from the filename
             [datetime]::ParseExact($matches[1], 'yyyy-MM-dd', $null)
         }
         else {
@@ -78,9 +83,8 @@ function Get-ListItems {
     } -Descending
 
     return $sortedFiles | ForEach-Object {
-        $fileName  = $_.Name
-        $thumbnail = Get-VideoThumbnail $fileName
-        return "`t`t`t`t<li><a href=$(Format-URL "/$fileName")><img src='/thumbnails/$thumbnail' alt='thumbnail' class='tn'/><span class='vt'>$(Get-Title $_.BaseName)</span></a></li>"
+        $thumbnail = Get-VideoThumbnail $_.Name
+        return "`t`t`t`t<li><a href=$(Get-HTMLURL "/$($_.FullName)")><img src='/thumbnails/$thumbnail' alt='thumbnail' class='tn'/><span class='vt'>$(Get-Title $_.BaseName)</span></a></li>"
     } | Out-String
 }
 
@@ -92,6 +96,7 @@ $content = Get-Content -LiteralPath $indexHtmlPath -Raw
 $content = $content -replace "(?s)(<ul class='video-group' id='vods-highlights-uploads-list'>).*?(</ul>)", ('$1' + "`n`t`t`t`t" + $liVods.Trim() + "`n`t`t`t" + '$2')
 $content = $content -replace "(?s)(<ul class='video-group' id='clips-list'>).*?(</ul>)", ('$1' + "`n`t`t`t`t" + $liClips.Trim() + "`n`t`t`t" + '$2')
 $content = $content -replace '    ', "`t"
+$content = $content.Trim()
 
 Set-Content -LiteralPath $indexHtmlPath -Value $content -Encoding utf8
 
