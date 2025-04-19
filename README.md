@@ -10,7 +10,7 @@ This repository aims to preserve [the greatest IRC channel on the internet](http
 
 Uses [TwitchDownloader](https://github.com/lay295/TwitchDownloader)'s [CLI](https://github.com/lay295/TwitchDownloader/blob/master/TwitchDownloaderCLI/README.md) for downloading chat data as JSON and converting it to HTML. 
 
-The downloaded JSON can be used to [render the chat as a video](https://github.com/lay295/TwitchDownloader/blob/master/TwitchDownloaderCLI/README.md#arguments-for-mode-chatrender) and is available on archive.org here: 
+The downloaded JSON can be used to [render the chat as a video](https://github.com/lay295/TwitchDownloader/blob/master/TwitchDownloaderCLI/README.md#arguments-for-mode-chatrender) and is available [on archive.org](https://archive.org/details/greatsphynx-chat-archive-json).
 
 <p align='center'>
 	<picture>
