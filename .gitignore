@@ -1,0 +1,15 @@
+/artifacts/
+/backups/
+/dist/
+/node_modules/
+/src/chat-json/
+/src/empty-chats/
+/src/images/badges/
+/src/images/emotes/twitch/
+/src/images/emotes/3rd-party/
+/src/videos/
+/test-html/
+/.wrangler/
+desktop.ini
+dist.zip
+test*
