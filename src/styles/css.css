@@ -1,0 +1,241 @@
+@import url('./fonts.css');
+@import url('./images.css');
+@import url('./username-colors.css');
+@import url('./bootstrap-4.0.0.css');
+
+:root {
+    color-scheme: light dark;
+    font-family: 'Inter', 'Roobert', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: light-dark(#f8f9fa, #191919);
+    color: light-dark(#212529, #f8f9fa);
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: left;
+    width: 100dvw;
+}
+
+.cr {
+    margin: 0;
+    padding: 0.45em 0;
+}
+
+.cr:nth-of-type(odd) {
+    background-color: light-dark(#f8f9fa, #191919);
+}
+
+.cr:nth-of-type(even) {
+    background-color: light-dark(#d8d9da, #222222);
+}
+
+.ca {
+    font-weight: bold;
+}
+
+.ei {
+    height: 32px;
+    margin: -6px 0;
+    vertical-align: middle;
+    width: max-content;
+}
+
+.bi {
+    height: 18px;
+    vertical-align: middle;
+    width: max-content;
+}
+
+#pagingControls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1.25rem;
+    padding: 6px;
+}
+
+#content {
+    padding: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    padding: 12px;
+}
+
+pre {
+    color: light-dark(#212529, #f8f9fa);
+    font-family: inherit;
+    white-space: pre-wrap;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+header h1 img {
+    padding-left: 0.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+section#clips,
+section#vods-highlights-uploads {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem;
+    padding: 1rem;
+}
+
+ul.video-group {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+ul.video-group li {
+    background-color: var(--card-bg, light-dark(#f8f9fa, #212121));
+    border-radius: 8px;
+    border: 1px solid var(--card-border, light-dark(#d8d9da, #222222));
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+ul.video-group li:hover {
+    transform: scale(1.02);
+}
+
+ul.video-group li a {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul.video-group li a img.tn {
+    border-bottom: 1px solid var(--card-border, light-dark(#d8d9da, #222222));
+    border-radius: 4px 4px 0 0;
+    height: auto;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+ul.video-group li a .vt {
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-wrap: balance;
+    white-space: nowrap;
+    width: 100%;
+}
+
+img#mornReal {
+    left: 4rem;
+    position: fixed;
+    top: 0;
+    transform: rotate(180deg);
+    width: 4rem;
+    z-index: 0;
+}
+
+img#actualEntertainment {
+    right: 0;
+    position: fixed;
+    top: 0;
+    height: 2rem;
+}
+
+img#spynxHeart {
+    position: fixed;
+    right: 0.69rem;
+    top: 2rem;
+}
+
+img#sppL {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 0.5rem;
+}
+
+img#honseWalk {
+    bottom: 0.42rem;
+    left: 0.5rem;
+    position: fixed;
+    width: 12rem;
+    z-index: 1;
+}
+
+img#patGlu {
+    bottom: 0;
+    left: 4.2rem;
+    position: fixed;
+    width: 3rem;
+    z-index: 0;
+}
+
+img#bounceDoc {
+    bottom: -2rem;
+    position: fixed;
+    right: 11rem;
+    width: 5rem;
+}
+
+img#bounceDok {
+    bottom: -1rem;
+    height: 4.2rem;
+    position: fixed;
+    right: 15.45rem;
+    width: 3rem;
+}
+
+img#phloxB {
+    bottom: 0;
+    position: fixed;
+    right: 5.75rem;
+    width: 5rem;
+}
+
+img#tuvokLUL {
+    bottom: 0;
+    position: fixed;
+    right: -0.6rem;
+    width: 6.5rem;
+    z-index: 1;
+}
+
+img#daxMug {
+    bottom: -0.3rem;
+    position: fixed;
+    right: -0.5rem;
+    width: 2rem;
+    z-index: 0;
+}
+
+footer img {
+    display: block;
+    margin: 0 auto;
+}
