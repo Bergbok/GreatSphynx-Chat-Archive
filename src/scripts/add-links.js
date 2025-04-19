@@ -13,7 +13,7 @@ if (!cssFile || !jsFile) {
 }
 
 replaceInFileSync({
-    files: 'dist/*.html',
+    files: 'dist/**/*.html',
     from: /<!-- favicon\+css\+js -->/g,
     to: `<link href='/favicon' rel='icon' type='image/avif'><script type='module' crossorigin src='/assets/${jsFile}'></script><link rel='stylesheet' crossorigin href='/assets/${cssFile}'>`
 });
