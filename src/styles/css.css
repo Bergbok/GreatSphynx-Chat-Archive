@@ -129,6 +129,7 @@ ul.video-group li a {
     text-align: center;
     text-decoration: none;
     text-wrap: balance;
+    margin-bottom: 0.69rem;
 }
 
 ul.video-group li a img.tn {
