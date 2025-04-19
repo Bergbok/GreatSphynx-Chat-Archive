@@ -1,0 +1,26 @@
+{
+    "name": "greatsphynx-chat-archive",
+    "private": true,
+    "version": "gongo",
+    "type": "module",
+    "homepage": "https://ohmies.bergbok.party",
+    "repository": "https://github.com/Bergbok/GreatSphynx-Chat-Archive",
+    "scripts": {
+        "build": "vite build",
+        "postbuild": "mv dist/src/html/* dist && rm -r dist/src && bun src/scripts/add-links.js",
+        "prebuild": "bun src/scripts/print-memory.js",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "browserslist": "^4.24.4",
+        "glob": "^11.0.1",
+        "lightningcss": "^1.29.3",
+        "replace-in-file": "^8.3.0",
+        "vite": "^6.3.0",
+        "vite-plugin-minify": "^2.1.0"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.5",
+        "jquery": "^3.7.1"
+    }
+}
