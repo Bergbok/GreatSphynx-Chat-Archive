@@ -18,4 +18,24 @@ The downloaded JSON can be used to [render the chat as a video](https://github.c
 			<img src='https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_1c09fae8d05043bc98f007b22b0ceb4d/default/dark/1.0'>
 		</a>
 	</picture>
+	<picture>
+		<a href='https://www.twitch.tv/popout/greatsphynx/chat'>
+			<img src='https://cdn.7tv.app/emote/01JNJJT230T9MPBCPAMEY9CYRP/1x.webp'>
+		</a>
+	</picture>
+	<picture>
+		<a href='https://www.twitch.tv/popout/greatsphynx/chat'>
+			<img src='https://cdn.betterttv.net/emote/665e3c1ee47776776a3b4fe3/1x'>
+		</a>
+	</picture>
+	<picture>
+		<a href='https://www.twitch.tv/popout/greatsphynx/chat'>
+			<img src='https://cdn.betterttv.net/emote/5fdc7773a926f43485cebbf3/1x'>
+		</a>
+	</picture>
+	<picture>
+		<a href='https://www.twitch.tv/popout/greatsphynx/chat'>
+			<img src='https://cdn.betterttv.net/emote/5e9f54fdce7cbf62fe15713a/1x'>
+		</a>
+	</picture>
 </p>
