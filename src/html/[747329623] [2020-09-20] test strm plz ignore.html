@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<!-- favicon+css+js -->
+<title>test strm plz ignore</title>
+</head>
+<body>
+<div class='controls'>
+<span>Search: </span>
+<input class='searchBox'>
+<span>Messages Per Page: </span>
+<select class='itemPerPageDropDown' id='itemPerPageDropDown'>
+<option value='10'>10</option>
+<option value='50'>50</option>
+<option value='100' selected='selected'>100</option>
+<option value='500'>500</option>
+<option value='1000'>1000</option>
+<option value='5000'>5000</option>
+<option value='99999999999999'>All</option>
+</select>
+</div>
+<div id='pagingControls'></div>
+<div id='content'>
+<pre class='cr'>[0:01:04] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: that looks smooth </span></pre>
+<pre class='cr'>[0:01:07] <img class='bi a2t' title='vip'><span class='th'>vip</span> <a href='https://twitch.tv/rivrcom'><span class='ca fNK'>rivrcom</span></a><span>: smooth as fuck </span></pre>
+<pre class='cr'>[0:01:15] <a href='https://twitch.tv/rasutei'><span class='ca exc'>Rasutei</span></a><span>: Oh wow </span></pre>
+<pre class='cr'>[0:01:22] <a href='https://twitch.tv/rasutei'><span class='ca exc'>Rasutei</span></a><span>: That&#39;s smoother than earlier on MW </span></pre>
+<pre class='cr'>[0:01:40] <img class='bi a2t' title='vip'><span class='th'>vip</span> <a href='https://twitch.tv/rivrcom'><span class='ca fNK'>rivrcom</span></a><span>: some cpu dips? </span></pre>
+<pre class='cr'>[0:02:55] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: no </span></pre>
+<pre class='cr'>[0:02:56] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: so </span></pre>
+<pre class='cr'>[0:03:04] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: what made it look better is having the hardware scheduling on </span></pre>
+<pre class='cr'>[0:03:13] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: but setting my monitor refresh rate to 120 </span></pre>
+<pre class='cr'>[0:03:20] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: so that its locked at a multiple of 60 </span></pre>
+<pre class='cr'>[0:03:22] <img class='bi a2t' title='vip'><span class='th'>vip</span> <a href='https://twitch.tv/rivrcom'><span class='ca fNK'>rivrcom</span></a><span>: ... </span></pre>
+<pre class='cr'>[0:03:24] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: but if i start to dip below 120 </span></pre>
+<pre class='cr'>[0:03:30] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: it starts to look choppy for you until it gets down to 60 </span></pre>
+<pre class='cr'>[0:03:40] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: and OBS has a limit framerate capture option </span></pre>
+<pre class='cr'>[0:03:41] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: but... </span></pre>
+<pre class='cr'>[0:03:45] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: i cant find where to set that framerate </span></pre>
+<pre class='cr'>[0:03:52] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: because it seems to just pick an arbitrary value </span></pre>
+<pre class='cr'>[0:03:57] <a href='https://twitch.tv/rasutei'><span class='ca exc'>Rasutei</span></a><span>: Sounds fun </span></pre>
+<pre class='cr'>[0:04:06] <img class='bi a0y' title='partner'><span class='th'>partner</span> <a href='https://twitch.tv/streamelements'><span class='ca f6i'>StreamElements</span></a><span>: GreatSphynx is now live! Streaming Games + Demos: test strm plz ignore </span></pre>
+<pre class='cr'>[0:04:22] <a href='https://twitch.tv/rasutei'><span class='ca exc'>Rasutei</span></a><span>: I&#39;m sure there must be some external program to lock games&#39; framerates, but myeh </span></pre>
+<pre class='cr'>[0:04:26] <img class='bi a2t' title='vip'><span class='th'>vip</span> <a href='https://twitch.tv/rivrcom'><span class='ca fNK'>rivrcom</span></a><span>: well its 90% smooth now and u can just drop some settings to ensure always 120 </span></pre>
+<pre class='cr'>[0:05:01] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: it looks REALLY bad though when it dips just like 5 frames </span></pre>
+<pre class='cr'>[0:05:03] <a href='https://twitch.tv/rasutei'><span class='ca exc'>Rasutei</span></a><span>: Oh, that was some jazzy stutter </span></pre>
+<pre class='cr'>[0:05:07] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: so i gotta figure it out </span></pre>
+<pre class='cr'>[0:05:07] <img class='bi a2t' title='vip'><span class='th'>vip</span> <a href='https://twitch.tv/rivrcom'><span class='ca fNK'>rivrcom</span></a><span>: yeah crusty </span></pre>
+<pre class='cr'>[0:05:14] <img class='bi a2t' title='vip'><span class='th'>vip</span> <a href='https://twitch.tv/rivrcom'><span class='ca fNK'>rivrcom</span></a><span>: good luck </span></pre>
+<pre class='cr'>[0:05:14] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: that&#39;s the thing is on my end it still looks perfectly smooth </span></pre>
+<pre class='cr'>[0:05:22] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: like i don&#39;t need to limit myself down to 120 </span></pre>
+<pre class='cr'>[0:05:25] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: <img class='ei eko' title='idk'><span class='th'>idk</span></span></pre>
+<pre class='cr'>[0:05:58] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: game says its only using 30% of my gpu </span></pre>
+<pre class='cr'>[0:06:06] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: but maybe windows can&#39;t monitor the RT cores properly </span></pre>
+<pre class='cr'>[0:06:16] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: task manager i mean </span></pre>
+<pre class='cr'>[0:06:20] <a href='https://twitch.tv/rasutei'><span class='ca exc'>Rasutei</span></a><span>: That sounds like it </span></pre>
+<pre class='cr'>[0:06:42] <a href='https://twitch.tv/rasutei'><span class='ca exc'>Rasutei</span></a><span>: It only using 30% doesn&#39;t sound very plausible, but then again, I&#39;m not familiar with these cards and RTX </span></pre>
+<pre class='cr'>[0:07:34] <img class='bi a0b' title='broadcaster'><span class='th'>broadcaster</span> <img class='bi a2e' title='turbo'><span class='th'>turbo</span> <a href='https://twitch.tv/greatsphynx'><span class='ca fIa'>GreatSphynx</span></a><span>: im gonna try doing lower resolution real quick </span></pre>
+</div>
+</body>
+</html>
