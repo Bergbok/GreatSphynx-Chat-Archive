@@ -1,8 +1,8 @@
 <!-- Statistics -->
 ```
 Video count: 892
-Date range: 2018-03-26 -> 2025-04-13
 Message count: 3,661,481
+Date range: 2018-03-26 -> 2025-04-13
 ```
 
 On May 19, 2025 Twitch will implement a 100-hour storage limit for [highlights](https://help.twitch.tv/s/article/video-on-demand#highlights) and [uploads](https://help.twitch.tv/s/article/video-on-demand#uploads). Channels still over the limit by the deadline will have their content deleted until they have been brought under the 100-hour limit, along with their chat replays.
@@ -40,3 +40,4 @@ The downloaded JSON can be used to [render the chat as a video](https://github.c
 		</a>
 	</picture>
 </p>
+

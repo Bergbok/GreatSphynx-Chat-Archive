@@ -24,7 +24,7 @@ foreach ($file in $htmlFiles) {
     $totalMessages += $messages.Count
 }
 
-$statsContent = "Video count: $fileCount`nDate range: $($minDate.ToString('yyyy-MM-dd')) -> $($maxDate.ToString('yyyy-MM-dd'))`nMessage count: $($totalMessages.ToString('N0', [Globalization.CultureInfo]::GetCultureInfo('en-US')))"
+$statsContent = "Video count: $($fileCount.ToString('N0', [Globalization.CultureInfo]::GetCultureInfo('en-US')))`nMessage count: $($totalMessages.ToString('N0', [Globalization.CultureInfo]::GetCultureInfo('en-US')))`nDate range: $($minDate.ToString('yyyy-MM-dd')) -> $($maxDate.ToString('yyyy-MM-dd'))"
 
 $readmeContent = Get-Content -LiteralPath $readmePath -Raw
 
