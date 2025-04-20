@@ -2,6 +2,18 @@ import $ from 'jquery';
 import 'bootstrap';
 import './flexible.pagination.js'
 
+const animatedElements = [
+    ...document.querySelectorAll('svg.icon'),
+    ...document.querySelectorAll('ul.video-group li')
+];
+
+animatedElements.forEach((el) => {
+    el.addEventListener('mouseenter', () => {
+        const randomDelay = Math.random() * 30; // random delay up to 30s
+        el.style.animationDelay = `-${randomDelay}s`;
+    }, { once: true });
+});
+
 // From: https://github.com/lay295/TwitchDownloader/blob/d63f861d4cac4d3408fc7a31569cc10e63678ad5/TwitchDownloaderCore/Resources/chat-template.html#L99 (MIT)
 
 /* https://stackoverflow.com/a/63270816 */

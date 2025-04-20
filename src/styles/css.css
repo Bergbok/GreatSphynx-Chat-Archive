@@ -1,5 +1,6 @@
 @import url('./fonts.css');
 @import url('./images.css');
+@import url('./animations.css');
 @import url('./username-colors.css');
 @import url('./bootstrap-4.0.0.css');
 
@@ -81,20 +82,22 @@ header h1 {
 }
 
 svg.icon {
-    fill: light-dark(#212529, #f8f9fa);
-    transition: fill 0.2s;
+    fill: light-dark(#191919, #f8f9fa);
+    animation: fillShift 30s linear infinite;
+    animation-play-state: paused;
+    transition: fill 1s ease-in-out;
 }
 
 svg.icon:hover {
-    fill: light-dark(#0a75e7, #6191d8);
+    animation-play-state: running;
 }
 
 .header-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem; /* Adjust space between icons if needed */
-    margin-top: 1rem; /* Optional: add some space below h1 */
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 header svg {
@@ -137,9 +140,13 @@ ul.video-group li {
     border: 1px solid var(--card-border, light-dark(#d8d9da, #222222));
     overflow: hidden;
     transition: transform 0.2s ease;
+    animation: colorShift 30s linear infinite;
+    animation-play-state: paused;
+    transition: color 1s ease-in-out;
 }
 
 ul.video-group li:hover {
+    animation-play-state: running;
     transform: scale(1.02);
 }
 
@@ -172,6 +179,8 @@ ul.video-group li a .vt {
     text-wrap: balance;
     width: 100%;
 }
+
+/* Overlay */
 
 img#mornReal {
     left: 4rem;
