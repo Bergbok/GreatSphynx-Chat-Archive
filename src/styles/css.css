@@ -80,6 +80,28 @@ header h1 {
     padding-top: 2rem;
 }
 
+svg.icon {
+    fill: light-dark(#212529, #f8f9fa);
+    transition: fill 0.2s;
+}
+
+svg.icon:hover {
+    fill: light-dark(#0a75e7, #6191d8);
+}
+
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Adjust space between icons if needed */
+    margin-top: 1rem; /* Optional: add some space below h1 */
+}
+
+header svg {
+    margin-right: 0.5rem;
+    width: 2.4rem;
+}
+
 header h1 img {
     padding-left: 0.5rem;
 }
