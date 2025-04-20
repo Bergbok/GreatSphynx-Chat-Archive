@@ -15,5 +15,5 @@ if (!cssFile || !jsFile) {
 replaceInFileSync({
     files: 'dist/**/*.html',
     from: /<!-- favicon\+css\+js -->/g,
-    to: `<link href='/favicon' rel='icon' type='image/avif'><script type='module' crossorigin src='/assets/${jsFile}'></script><link rel='stylesheet' crossorigin href='/assets/${cssFile}'>`
+    to: `<link href='/favicon' rel='icon' type='image/avif'><link rel='stylesheet' crossorigin href='/assets/${cssFile}'><link href='/fonts/Inter-VariableFont_opsz,wght.woff2' as='font' rel='preload' type='font/woff2' crossorigin='anonymous'><link href='/fonts/Inter-Italic-VariableFont_opsz,wght.woff2' as='font' rel='preload' type='font/woff2' crossorigin='anonymous'><script type='module' crossorigin src='/assets/${jsFile}'></script>`
 });
