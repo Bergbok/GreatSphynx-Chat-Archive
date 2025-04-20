@@ -117,7 +117,7 @@ Get-ChildItem $htmlPath -Filter *.html -Recurse -File | ForEach-Object {
     $content = $content -replace '\btext-hide\b', 'th'
     $content = $content -replace '<\/span> <\/span>', '</span></span>'
     $content = $content -replace "<base target='_blank'>\s*", ''
-    $content = $content -replace "<link href='https:\/\/fonts\.googleapis\.com\/css\?family=Inter' rel='stylesheet'>", "<meta name='favicon+css+js'>"
+    $content = $content -replace "<link href='https:\/\/fonts\.googleapis\.com\/css\?family=Inter' rel='stylesheet'>", '<!-- links -->'
     $content = $content -replace "<span class='ca' >", "<span class='ca'>"
     $content = $content -replace "<span class='comment-message'>", '<span>'
     $content = $content -replace "comment-author' >", "comment-author'>"
