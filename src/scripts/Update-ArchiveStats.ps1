@@ -4,6 +4,8 @@ $readmePath = Join-Path $PSScriptRoot '../../README.md'
 $htmlFiles   = Get-ChildItem $htmlPath -Filter '*.html' -Recurse
 $fileCount   = $htmlFiles.Count
 
+Write-Host "Determining date range..." -ForegroundColor Green
+
 $dates = $htmlFiles | ForEach-Object {
     if ($_.BaseName -match '\b(?<date>\d{4}-\d{2}-\d{2})\b') {
         [datetime]::ParseExact($matches['date'], 'yyyy-MM-dd', $null)
@@ -13,7 +15,16 @@ $dates = $htmlFiles | ForEach-Object {
 $minDate = ($dates | Sort-Object)[0]
 $maxDate = ($dates | Sort-Object)[-1]
 
-$statsContent = "File count: $fileCount`nDate range: $($minDate.ToString('yyyy-MM-dd')) -> $($maxDate.ToString('yyyy-MM-dd'))"
+Write-Host "Determining message count..." -ForegroundColor Green
+
+$totalMessages = 0
+foreach ($file in $htmlFiles) {
+    $content = Get-Content -LiteralPath $file.FullName -Raw
+    $messages = [regex]::Matches($content, '<pre\s+class\s*=\s*["'']cr["'']')
+    $totalMessages += $messages.Count
+}
+
+$statsContent = "Video count: $fileCount`nDate range: $($minDate.ToString('yyyy-MM-dd')) -> $($maxDate.ToString('yyyy-MM-dd'))`nMessage count: $($totalMessages.ToString('N0', [Globalization.CultureInfo]::GetCultureInfo('en-US')))"
 
 $readmeContent = Get-Content -LiteralPath $readmePath -Raw
 
