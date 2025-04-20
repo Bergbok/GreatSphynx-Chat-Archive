@@ -84,7 +84,7 @@ function Get-ListItems {
 
     return $sortedFiles | ForEach-Object {
         $thumbnail = Get-VideoThumbnail $_.Name
-        return "`t`t`t`t<li><a href=$(Get-HTMLURL "/$($_.FullName)")><img src='/thumbnails/$thumbnail' alt='thumbnail' class='tn'/><span class='vt'>$(Get-Title $_.BaseName)</span></a></li>"
+        return "`t`t`t`t<li><a href=$(Get-HTMLURL "/$($_.FullName)")><img src='/thumbnails/$thumbnail' alt='thumbnail' class='tn' width='1280' height='720'/><span class='vt'>$(Get-Title $_.BaseName)</span></a></li>"
     } | Out-String
 }
 
