@@ -116,6 +116,7 @@ Get-ChildItem $htmlPath -Filter *.html -Recurse -File | ForEach-Object {
     $content = $content -replace '\bemote-image\b', 'ei'
     $content = $content -replace '\btext-hide\b', 'th'
     $content = $content -replace '<\/span> <\/span>', '</span></span>'
+    $content = $content -replace "(?s)<div class='controls'>.*<div id='pagingControls'><\/div>", '<!-- paging -->'
     $content = $content -replace "<base target='_blank'>\s*", ''
     $content = $content -replace "<link href='https:\/\/fonts\.googleapis\.com\/css\?family=Inter' rel='stylesheet'>", '<!-- links -->'
     $content = $content -replace "<span class='ca' >", "<span class='ca'>"
