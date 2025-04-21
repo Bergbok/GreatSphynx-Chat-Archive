@@ -7,7 +7,7 @@
     "repository": "https://github.com/Bergbok/GreatSphynx-Chat-Archive",
     "scripts": {
         "build": "vite build",
-        "postbuild": "mv dist/src/html/* dist && rm -r dist/src && bun src/scripts/add-links.js",
+        "postbuild": "mv dist/src/html/* dist && rm -r dist/src && bun src/scripts/replace-placeholders.js",
         "prebuild": "bun src/scripts/print-memory.js",
         "preview": "vite preview"
     },
