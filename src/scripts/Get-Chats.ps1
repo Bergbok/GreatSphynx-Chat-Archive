@@ -27,7 +27,7 @@ $entries = $vodEntries + $clipEntries
 
 foreach ($entry in $entries) {
     $title = Format-Title $entry.title $entry.video_type $entry.duration
-    $yyyymmdd = $entry.created_at.Substring(0, 10)
+    $yyyymmdd = $entry.created_at.ToString().Substring(0, 10)
     $outputFileName = "[$($entry.id)] [$yyyymmdd] $("[$($entry.creator_name)] " -replace '^\[\] $', '')$title" -replace '\s*$', ''
 
     if ($outputFileName -match ' \[Clip\] ') {
