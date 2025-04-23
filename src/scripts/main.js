@@ -15,6 +15,42 @@ if (window.location.pathname === '/') {
         }, { once: true });
     });
 } else {
+    function setupControlMover(selector) {
+        const controlEl = document.querySelector(selector);
+        if (!controlEl) return;
+
+        const originalParent = controlEl.parentElement;
+        const sentinelId = selector.replace(/[^a-zA-Z0-9]/g, '') + '-sentinel';
+        let sentinel = document.getElementById(sentinelId);
+
+        if (!sentinel) {
+            sentinel = document.createElement('div');
+            sentinel.id = sentinelId;
+            originalParent.insertBefore(sentinel, controlEl);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.target !== sentinel) return;
+
+                if (entry.isIntersecting) {
+                    if (sentinel.nextElementSibling !== controlEl) {
+                        originalParent.insertBefore(controlEl, sentinel);
+                    }
+                } else {
+                    document.body.appendChild(controlEl);
+                }
+            });
+        }, {
+            threshold: 0
+        });
+
+        observer.observe(sentinel);
+    }
+
+    setupControlMover('#controls');
+    setupControlMover('#pagingControls');
+
     // From: https://github.com/lay295/TwitchDownloader/blob/d63f861d4cac4d3408fc7a31569cc10e63678ad5/TwitchDownloaderCore/Resources/chat-template.html#L99 (MIT)
 
     /* https://stackoverflow.com/a/63270816 */

@@ -21,6 +21,13 @@ body {
     width: 100dvw;
 }
 
+div[id$='sentinel'] {
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+}
+
 .cr {
     margin: 0;
     padding: 0.45em 0;
