@@ -35,6 +35,16 @@ function Get-Title {
         return $filenamesThatHadToBeShortened[$filename]
     }
 
+    $filename = $filename -replace '：', ':'
+    $filename = $filename -replace '？', '?'
+    $filename = $filename -replace '＂', '&quot;'
+    $filename = $filename -replace '﹤', '&lt;'
+    $filename = $filename -replace '＞', '&gt;'
+    $filename = $filename -replace '｜', '|'
+    $filename = $filename -replace '✱', '*'
+    $filename = $filename -replace '⧸', '/'
+    $filename = $filename -replace '⧹', '\'
+
     return $filename
 }
 
