@@ -62,7 +62,7 @@ body {
     padding: 10px;
 }
 
-.controls {
+#controls {
     display: flex;
     gap: 0.25rem;
     justify-content: center;

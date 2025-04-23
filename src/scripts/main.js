@@ -53,8 +53,8 @@ if (window.location.pathname !== '/') {
             pagingControlsContainer: "#pagingControls",
             pagingContainer: "#content",
             itemSelector: ".cr:visible",
-            itemsPerPageSelector: ".itemPerPageDropDown",
-            searchBoxSelector: '.searchBox',
+            itemsPerPageSelector: "#itemPerPageDropDown",
+            searchBoxSelector: '#searchBox',
             itemsPerPage: 100,
             currentPage: 1,
 

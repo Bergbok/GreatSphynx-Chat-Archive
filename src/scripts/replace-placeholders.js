@@ -22,6 +22,6 @@ replaceInFileSync({
 replaceInFileSync({
     files: 'dist/**/*.html',
     from: /<!-- paging -->/g,
-    to: "<div class='controls'><span>Search: </span><input class='searchBox'><span>Messages Per Page: </span><select class='itemPerPageDropDown' id='itemPerPageDropDown'><option value='10'>10</option><option value='50'>50</option><option value='100' selected='selected'>100</option><option value='500'>500</option><option value='1000'>1000</option><option value='5000'>5000</option><option value='99999999999999'>All</option></select></div><div id='pagingControls'></div>",
+    to: "<div id='controls'><span>Search: </span><input id='searchBox'><span>Messages Per Page: </span><select id='itemPerPageDropDown'><option value='10'>10</option><option value='50'>50</option><option value='100' selected='selected'>100</option><option value='500'>500</option><option value='1000'>1000</option><option value='5000'>5000</option><option value='99999999999999'>All</option></select></div><div id='pagingControls'></div>",
     encoding: 'utf8'
 });
